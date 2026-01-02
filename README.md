@@ -1,0 +1,91 @@
+# Housing Price Analysis: Netherlands & Europe 
+
+### Project Overview
+This project analyzes the **house price trends in the Netherlands and other European countries since 2020**, using official Eurostat data. The goal is to understand how Dutch house prices have changed compared to neighboring countries, and to provide insights for potential policy, investment, or business decisions.
+
+**Key Questions:**
+- How have house prices in the Netherlands evolved since COVID-19?
+- How do Dutch house prices compare to other European countries?
+- Which countries have experienced the highest growth in house prices?
+
+---
+
+## Dataset
+**Source:** [Eurostat – House Price Index](https://ec.europa.eu/eurostat/web/hicp/data/database)  
+**Format:** CSV  
+**Columns include:**
+- `geo` – Country name
+- `TIME_PERIOD` – YEAR & Quarter of the data
+- `OBS_VALUE` – House price index
+
+**Notes:**
+- Only years 2019–2025 are considered for this analysis.
+- Missing values were removed and duplicates were filtered.
+
+---
+
+## Tools & Skills
+- **SQL (PostgreSQL):** Data cleaning, transformation, aggregation, and analysis  
+- **Power BI:** Visualization of trends, comparisons, and dashboards  
+- **Data Analysis Skills:** Time-series analysis, cross-country comparison, KPI calculation  
+- **Analytical Thinking:** Framing business questions, deriving insights, presenting actionable recommendations
+
+---
+
+### Analysis Steps
+
+## Step 1 Exlopre the data
+select distinct *
+from housing_europe he
+limit 15;
+
+## Step 2 Check for missing values
+select *
+from housing_europe he 
+where he."OBS_VALUE" is null;
+
+## Step 3 create a cleaned table
+create table house_price_index_cleaned as 
+select he.geo , he."TIME_PERIOD" , he."OBS_VALUE" 
+from housing_europe he
+WHERE he."OBS_VALUE" is NOT null
+order by he."OBS_VALUE" DESC;
+
+## Step 4 Trend over time in the Netherlands
+select hp."TIME_PERIOD", AVG(hp."OBS_VALUE") as avg_price_index_nl
+from house_price_index_cleaned hp
+where hp.geo = 'Netherlands'
+group by hp."TIME_PERIOD"
+order by hp."TIME_PERIOD" desc;
+
+
+## Step 5 Netherlands vs EU comparison, calculate average house price index per country 
+select hp.geo, hp."TIME_PERIOD", avg(hp."OBS_VALUE") as avg_price_index
+from house_price_index_cleaned hp
+group by hp.geo, hp."TIME_PERIOD"
+order by avg_price_index DESC;
+
+### Key Insights – Netherlands vs EU Comparison
+
+- **Netherlands housing growth:**  
+  The house price index for the Netherlands increased steadily from approximately **183 in 2023-Q1** to **213 in 2025-Q2**, indicating a strong upward trend over the last 2–3 years. This shows consistent growth in the Dutch housing market.
+
+- **Top growth countries:**  
+  Countries such as **Turkey (~1569–1885)**, **Hungary (~259–353)**, and **Iceland (~198–262)** have the highest house price indices in recent quarters, surpassing the Netherlands. This highlights rapid growth in emerging or smaller markets compared to Western Europe.
+
+- **Comparison to EU peers:**  
+  Western European countries like **Germany, Ireland, and Austria** show moderate growth with 2025-Q2 index values around **164–166**. Southern and Eastern European countries show wider variation, from **~169 (Luxembourg)** to **~353 (Hungary)**, reflecting diverse housing market trends across Europe.
+
+- **Investment and policy implications:**  
+  The Netherlands exhibits strong housing demand, making it attractive for investors. However, some EU markets show faster growth, which can inform cross-country investment strategies and housing policy decisions.
+
+- **Visualization suggestions:**  
+  - **Line chart:** Show Netherlands trend over time (2023–2025)  
+  - **Bar chart:** Compare average house price index by country in 2025-Q2
+  
+### Contact 
+- **Portfolio / Data Visualizations:** [Instagram – DataDrawers](https://www.instagram.com/datadrawers/)  
+- **LinkedIn:** [https://www.linkedin.com/in/chuyunh/]  
+
+
+
