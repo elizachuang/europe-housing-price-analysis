@@ -11,7 +11,7 @@ This project analyzes the **house price trends in the Netherlands and other Euro
 ---
 
 ## Dataset
-**Source:** [Eurostat – House Price Index](https://ec.europa.eu/eurostat/web/hicp/data/database)  
+**Source:** [Eurostat – House Price Index](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Housing_price_statistics_-_house_price_index#Data_sources)  
 **Format:** CSV  
 **Columns include:**
 - `geo` – Country name
