@@ -82,9 +82,10 @@ This project analyzes the **house price trends in the Netherlands and other Euro
   - **Line chart:** Show Netherlands trend over time (2023–2025)  
   - **Bar chart:** Compare average house price index by country in 2025-Q2
   
-### Contact 
-- **Portfolio / Data Visualizations:** [Instagram – DataDrawers](https://www.instagram.com/datadrawers/)  
-- **LinkedIn:** [https://www.linkedin.com/in/chuyunh/]  
+## 👤 Contact
+- Eliza C. Huang | Data Analyst with a background in UX research and data-driven analysis. Interested in roles within public policy, NGOs, human rights, and social impact organizations.
+- Portfolio / Data Visualizations: Instagram – DataDrawers
+- LinkedIn: [https://www.linkedin.com/in/chuyunh/]
 
 
 
