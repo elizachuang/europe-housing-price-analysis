@@ -26,7 +26,6 @@ This project analyzes the **house price trends in the Netherlands and other Euro
 
 ## Tools & Skills
 - **SQL (PostgreSQL):** Data cleaning, transformation, aggregation, and analysis  
-- **Power BI:** Visualization of trends, comparisons, and dashboards  
 - **Data Analysis Skills:** Time-series analysis, cross-country comparison, KPI calculation  
 - **Analytical Thinking:** Framing business questions, deriving insights, presenting actionable recommendations
 
