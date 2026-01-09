@@ -1,4 +1,5 @@
 # Housing Price Analysis: Netherlands & Europe 
+<img width="auto" height="auto" alt="A banner with a bright blue background featuring the white text: Housing Price Analysis in a large font, with NETHERLANDS & EUROPE written in a smaller font below it. The sides of the banner are decorated with simple white line illustrations of traditional multi-story European-style houses." src="https://github.com/user-attachments/assets/7c4131fc-7f27-40bd-aab0-ba79d99d59de" />
 
 ### Project Overview
 This project analyzes the **house price trends in the Netherlands and other European countries since 2020**, using official Eurostat data. The goal is to understand how Dutch house prices have changed compared to neighboring countries, and to provide insights for potential policy, investment, or business decisions.
