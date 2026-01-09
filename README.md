@@ -35,35 +35,45 @@ This project analyzes the **house price trends in the Netherlands and other Euro
 ### Analysis Steps
 
 ## Step 1 Exlopre the data
-- select distinct *
-- from housing_europe he
-- limit 15;
+``` 
+SELECT DISTINCT *
+FROM housing_europe he
+LIMIT 15; 
+```
 
 ## Step 2 Check for missing values
-- select *
-- from housing_europe he 
-- where he."OBS_VALUE" is null;
+``` 
+SELECT *
+FROM housing_europe he 
+WHERE he."OBS_VALUE" IS NULL;
+```
 
 ## Step 3 create a cleaned table
-- create table house_price_index_cleaned as 
-- select he.geo , he."TIME_PERIOD" , he."OBS_VALUE" 
-- from housing_europe he
-- WHERE he."OBS_VALUE" is NOT null
-- order by he."OBS_VALUE" DESC;
+```
+CREATE TABLE house_price_index_cleaned AS
+SELECT he.geo , he."TIME_PERIOD" , he."OBS_VALUE" 
+FROM housing_europe he
+WHERE he."OBS_VALUE" IS NOT null
+ORDER BY he."OBS_VALUE" DESC;
+```
 
 ## Step 4 Trend over time in the Netherlands
-- select hp."TIME_PERIOD", AVG(hp."OBS_VALUE") as avg_price_index_nl
-- from house_price_index_cleaned hp
-- where hp.geo = 'Netherlands'
-- group by hp."TIME_PERIOD"
-- order by hp."TIME_PERIOD" desc;
+```
+SELECT hp."TIME_PERIOD", AVG(hp."OBS_VALUE") AS avg_price_index_nl
+FROM house_price_index_cleaned hp
+WHERE hp.geo = 'Netherlands'
+GROUP BY hp."TIME_PERIOD"
+ORDER BY hp."TIME_PERIOD" DESC;
+```
 
 
 ## Step 5 Netherlands vs EU comparison, calculate average house price index per country 
-- select hp.geo, hp."TIME_PERIOD", avg(hp."OBS_VALUE") as avg_price_index
-- from house_price_index_cleaned hp
-- group by hp.geo, hp."TIME_PERIOD"
-- order by avg_price_index DESC;
+```
+SELECT hp.geo, hp."TIME_PERIOD", AVG(hp."OBS_VALUE") AS avg_price_index
+FROM house_price_index_cleaned hp
+GROUP BY hp.geo, hp."TIME_PERIOD"
+ORDER BY avg_price_index DESC;
+```
 
 ### Key Insights – Netherlands vs EU Comparison
 
