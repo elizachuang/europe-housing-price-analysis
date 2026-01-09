@@ -1,5 +1,7 @@
 # Housing Price Analysis: Netherlands & Europe 
-<img width="auto" height="auto" alt="A banner with a bright blue background featuring the white text: Housing Price Analysis in a large font, with NETHERLANDS & EUROPE written in a smaller font below it. The sides of the banner are decorated with simple white line illustrations of traditional multi-story European-style houses." src="https://github.com/user-attachments/assets/7c4131fc-7f27-40bd-aab0-ba79d99d59de" />
+
+<img width="auto" height="auto" alt="A banner with a bright blue background featuring the white text: Housing Price Analysis in a large font, with NETHERLANDS & EUROPE written in a smaller font below it. The sides of the banner are decorated with simple white line illustrations of traditional multi-story European-style houses." src="https://github.com/user-attachments/assets/cc16cc16-667f-4162-94c4-5456fba8e7c8" />
+
 
 ## Tableau Dashboard
 https://public.tableau.com/views/HousepricetrendsinEurope2022-2025/Dashboard_housing?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
