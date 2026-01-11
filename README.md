@@ -100,7 +100,7 @@ ORDER BY avg_price_index DESC;
   - **Bar chart:** Compare average house price index by country in 2025-Q2
   
 ## 👤 Contact
-- Eliza C. Huang | Data Analyst with a background in UX research and data-driven analysis. Interested in roles within public policy, NGOs, human rights, and social impact organizations.
+- Eliza C. Huang | Data Analyst with a background in UX and data-driven analysis. Interested in roles within public policy, NGOs, human rights, and social impact organizations.
 - Portfolio / Data Visualizations: Instagram – DataDrawers
 - LinkedIn: [https://www.linkedin.com/in/chuyunh/]
 
